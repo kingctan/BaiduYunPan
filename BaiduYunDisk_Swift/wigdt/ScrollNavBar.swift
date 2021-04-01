@@ -34,7 +34,7 @@ class ScrollNavBar: UIView {
         
         return tmpAnim
     
-    }()
+    }
     
     var nLastIndex : Int = 0
     
@@ -105,7 +105,7 @@ class ScrollNavBar: UIView {
             let button : UIButton = UIButton.init(frame:CGRect.init(x: CGFloat(idx) * averageItemWidth, y: 0, width: averageItemWidth, height: 40))
             button.tag = idx
             button.addTarget(self, action: #selector(onClickListener(btn:)), for:.touchUpInside)
-            button.setTitle(title, for: UIControlState.normal)
+            button.setTitle(title, for: UIControl.State.normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
             button.setTitleColor(UIColor.white, for: .normal)
             
@@ -173,7 +173,7 @@ class ScrollNavBar: UIView {
     
 
     
-    func onClickListener(btn : UIButton?)  {
+    @objc func onClickListener(btn : UIButton?)  {
         
         if (delegate != nil) {
             delegate?.onChangeListener(index: btn!.tag)
@@ -285,7 +285,7 @@ class ScrollNavBar: UIView {
         moveAnimation.toValue = toValue
         moveAnimation.delegate = self as CAAnimationDelegate
         moveAnimation.isRemovedOnCompletion = false
-        moveAnimation.fillMode = kCAFillModeForwards
+        moveAnimation.fillMode = CAMediaTimingFillMode.forwards
         moveAnimation.duration = duration
         
         bottomLine.layer.removeAllAnimations()

@@ -133,7 +133,7 @@ class BaseDialog : UIView{
         
     }
     
-    func onCloseDialog(){
+    @objc func onCloseDialog(){
     
         if self.bIsOutSideCloseDialog{
         

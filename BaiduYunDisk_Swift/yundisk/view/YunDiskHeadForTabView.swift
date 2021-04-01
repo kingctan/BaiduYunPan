@@ -39,10 +39,10 @@ class YunDiskHeadForTabView: BaseRefreshHeadView {
         moveAnim.duration = 0.5
         moveAnim.delegate = self as CAAnimationDelegate
         
-        moveAnim.fillMode = kCAFillModeForwards;
+        moveAnim.fillMode = CAMediaTimingFillMode.forwards;
         moveAnim.isRemovedOnCompletion = false;
         
-        moveAnim.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
+        moveAnim.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeInEaseOut)
         moveAnim.setValue("positionAnimation", forKey: "moveAnim")
         
         return moveAnim
@@ -56,9 +56,9 @@ class YunDiskHeadForTabView: BaseRefreshHeadView {
         tmpAnim.fromValue = NSValue.init(cgPoint: center)
         tmpAnim.toValue = NSValue.init(cgPoint: CGPoint.init(x: center.x, y: center.y + self.radius))
         tmpAnim.duration = 0.5
-        tmpAnim.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
+        tmpAnim.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeInEaseOut)
         
-        tmpAnim.fillMode = kCAFillModeForwards;
+        tmpAnim.fillMode = CAMediaTimingFillMode.forwards;
         tmpAnim.isRemovedOnCompletion = false;
         
         return tmpAnim;
@@ -126,10 +126,10 @@ class YunDiskHeadForTabView: BaseRefreshHeadView {
         animation.duration = 0.7
         animation.fromValue = 1.0
         animation.toValue = 0.0
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
         
-        animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeInEaseOut)
         animation.setValue("arcRotateAnim", forKey: "animationName")
         
         
@@ -141,7 +141,7 @@ class YunDiskHeadForTabView: BaseRefreshHeadView {
         rotateAnim.toValue = PI * 2
         rotateAnim.duration = 0.7
         
-        rotateAnim.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
+        rotateAnim.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeInEaseOut)
         rotateAnim.setValue("BasicAnimationRotation", forKey: "animationName")
         
         self.layer.add(rotateAnim, forKey: "")

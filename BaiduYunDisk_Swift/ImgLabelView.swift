@@ -52,7 +52,7 @@ class ImgLabelView: UIView {
     
         let img:UIImageView = UIImageView(frame:CGRect(x:(self.frame.width - imgSize.width) / 2, y:imgMarginTop, width:imgSize.width, height:imgSize.height))
         img.image = UIImage(named:image)
-        img.contentMode = UIViewContentMode.scaleAspectFill
+        img.contentMode = UIView.ContentMode.scaleAspectFill
         self.addSubview(img)
         
         let label:UILabel = UILabel(frame:CGRect(x : 0, y : imgSize.height + textMarginTop, width : self.frame.width, height : 30))
@@ -68,7 +68,7 @@ class ImgLabelView: UIView {
     }
     
     
-    func tapGestureAction(){
+    @objc func tapGestureAction(){
         onClickListener(self.tag)
     }
 }

@@ -40,13 +40,13 @@ class TransListVC: BaseVC {
         self.view.addSubview(topNavBar)
         let backIcon : UIImageView = UIImageView.init(image: UIImage.init(named: "title_back_icon_normal"))
         backIcon.frame = CGRect.init(x: 10, y: 10, width: 30, height: 30)
-        backIcon.contentMode = UIViewContentMode.scaleAspectFit
+        backIcon.contentMode = UIView.ContentMode.scaleAspectFit
         backIcon.addOnClickListener(target: self, action: #selector(onBack))
         topNavBar.addSubview(backIcon)
         
         let moreBtn : UIButton = UIButton.init(frame: CGRect.init(x: getScreenSize().width - 40, y: 0, width: 40, height: 40))
         moreBtn.setImage(UIImage.init(named: "title_more_button_normal"), for: .normal)
-        moreBtn.addTarget(self, action: #selector(onClickListener), for: UIControlEvents.touchUpInside)
+        moreBtn.addTarget(self, action: #selector(onClickListener), for: UIControl.Event.touchUpInside)
         topNavBar.addSubview(moreBtn)
         
         
@@ -82,11 +82,11 @@ class TransListVC: BaseVC {
         
     }
     
-    func onBack(){
+    @objc func onBack(){
         self.dismiss(animated: true, completion: nil)
     }
     
-    func onClickListener(button : UIButton) {
+    @objc func onClickListener(button : UIButton) {
     
         print("84--------------")
     }

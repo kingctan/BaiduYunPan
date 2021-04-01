@@ -77,12 +77,12 @@ class YunDiskTableView : BaseTableView{
             
             case CellItemType.yunDiskResType:
             
-                cell = YunDiskResCell(style:UITableViewCellStyle.default, reuseIdentifier : "YunDiskResType")
+                cell = YunDiskResCell(style:UITableViewCell.CellStyle.default, reuseIdentifier : "YunDiskResType")
                 break;
             
             case CellItemType.yunDiskOptionType:
             
-                cell = YunDiskOptionCell(style:UITableViewCellStyle.default, reuseIdentifier : "YunDiskOptionType")
+                cell = YunDiskOptionCell(style:UITableViewCell.CellStyle.default, reuseIdentifier : "YunDiskOptionType")
                 break;
             
             default:

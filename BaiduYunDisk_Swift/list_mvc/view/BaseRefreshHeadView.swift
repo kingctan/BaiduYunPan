@@ -130,7 +130,7 @@ class BaseRefreshHeadView: UIView {
         
         UIView.animate(withDuration: 0.5, animations: {
             
-          self.scrollView?.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+            self.scrollView?.contentInset = UIEdgeInsets.init(top:0, left:0, bottom:0, right:0)
         }, completion: {(true) -> Void in
         
             self.onEnd()
@@ -177,7 +177,7 @@ class BaseRefreshHeadView: UIView {
                     setRefreshState(refreshState: .Refreshing)
                     UIView.animate(withDuration: 0.5, animations: {
                     
-                        self.scrollView?.contentInset = UIEdgeInsetsMake(self.frame.height, 0, 0, 0)
+                        self.scrollView?.contentInset = UIEdgeInsets.init(top:self.frame.height, left:0, bottom:0, right:0)
                     })
                     
                     PullDownRefreshBlock()

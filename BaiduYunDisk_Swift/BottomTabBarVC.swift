@@ -113,8 +113,8 @@ class BottomTabBarVC: UITabBarController,UITabBarControllerDelegate {
         
         //添加顶部菜单
         let cancelBtn : UIButton = UIButton.init()
-        cancelBtn.setTitle("取消", for: UIControlState.normal)
-        cancelBtn.setTitleColor(UIColor.white, for: UIControlState.normal)
+        cancelBtn.setTitle("取消", for: UIControl.State.normal)
+        cancelBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
         cancelBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         cancelBtn.layer.borderWidth = 1.0
         topMenuBgView.addSubview(cancelBtn)
@@ -138,8 +138,8 @@ class BottomTabBarVC: UITabBarController,UITabBarControllerDelegate {
         })
         
         let chooseAllBtn : UIButton = UIButton.init()
-        chooseAllBtn.setTitle("全部", for: UIControlState.normal)
-        chooseAllBtn.setTitleColor(UIColor.white, for: UIControlState.normal)
+        chooseAllBtn.setTitle("全部", for: UIControl.State.normal)
+        chooseAllBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
         chooseAllBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         chooseAllBtn.layer.borderWidth = 1.0
         topMenuBgView.addSubview(chooseAllBtn)
@@ -281,7 +281,7 @@ class BottomTabBarVC: UITabBarController,UITabBarControllerDelegate {
     
     var bIsClose : Bool = false
     //通知处理函数
-    func didMsgRecv(notification:NSNotification){
+    @objc func didMsgRecv(notification:NSNotification){
         //        let info : NSDictionary = notification.object as! NSDictionary
         //        let data = info.object(forKey: "ItemInfo")
         //        print("didMsgRecv: \(String(describing: data))")

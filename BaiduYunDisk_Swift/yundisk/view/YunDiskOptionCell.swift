@@ -20,13 +20,13 @@ class YunDiskOptionCell: BaseTabViewCell {
         
         
         
-        btnSort.setImage(UIImage.init(named: "main_list_header_rank_normal"), for: UIControlState.normal)
-        btnSort.setImage(UIImage.init(named: "main_list_header_rank_pressed"), for: UIControlState.highlighted)
+        btnSort.setImage(UIImage.init(named: "main_list_header_rank_normal"), for: UIControl.State.normal)
+        btnSort.setImage(UIImage.init(named: "main_list_header_rank_pressed"), for: UIControl.State.highlighted)
         btnSort.addTarget(self, action: #selector(onClick(sender:)), for:.touchUpInside)
         btnSort.tag = 21
         
-        btnSort.contentMode = UIViewContentMode.scaleToFill
-        btnSort.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
+        btnSort.contentMode = UIView.ContentMode.scaleToFill
+        btnSort.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center;
         self.addSubview(btnSort)
         btnSort.snp.makeConstraints({(make) in
             
@@ -37,12 +37,12 @@ class YunDiskOptionCell: BaseTabViewCell {
         })
         
         
-        btnNewDirectory.setImage(UIImage.init(named: "main_list_header_create_folder_normal"), for: UIControlState.normal)
+        btnNewDirectory.setImage(UIImage.init(named: "main_list_header_create_folder_normal"), for: UIControl.State.normal)
         btnNewDirectory.tag = 22
-        btnNewDirectory.setImage(UIImage.init(named: "main_list_header_create_folder_pressed"), for: UIControlState.highlighted)
+        btnNewDirectory.setImage(UIImage.init(named: "main_list_header_create_folder_pressed"), for: UIControl.State.highlighted)
         btnNewDirectory.addTarget(self, action: #selector(onClick(sender:)), for:.touchUpInside)
-        btnNewDirectory.contentMode = UIViewContentMode.scaleToFill
-        btnNewDirectory.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
+        btnNewDirectory.contentMode = UIView.ContentMode.scaleToFill
+        btnNewDirectory.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center;
         self.addSubview(btnNewDirectory)
         btnNewDirectory.snp.makeConstraints({(make) in
             
@@ -55,12 +55,12 @@ class YunDiskOptionCell: BaseTabViewCell {
         
         
         
-        btnSearch.setImage(UIImage.init(named: "main_list_header_search_normal"), for: UIControlState.normal)
+        btnSearch.setImage(UIImage.init(named: "main_list_header_search_normal"), for: UIControl.State.normal)
         btnSearch.tag = 23
-        btnSearch.setImage(UIImage.init(named: "main_list_header_search_pressed"), for: UIControlState.highlighted)
+        btnSearch.setImage(UIImage.init(named: "main_list_header_search_pressed"), for: UIControl.State.highlighted)
         btnSearch.addTarget(self, action: #selector(onClick(sender:)), for:.touchUpInside)
-        btnSearch.contentMode = UIViewContentMode.scaleToFill
-        btnSearch.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
+        btnSearch.contentMode = UIView.ContentMode.scaleToFill
+        btnSearch.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center;
         self.addSubview(btnSearch)
         btnSearch.snp.makeConstraints({(make) in
             
@@ -76,7 +76,7 @@ class YunDiskOptionCell: BaseTabViewCell {
         
     }
     
-    func onClick(sender:UIButton?){
+    @objc func onClick(sender:UIButton?){
     
         
         print("78-----------\(sender?.tag)")

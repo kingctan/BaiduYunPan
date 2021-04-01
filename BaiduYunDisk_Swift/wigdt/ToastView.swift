@@ -37,7 +37,7 @@ class ToastView: UIView {
                                 height: textInfo.position.size.height)
         
         tmpLayer.foregroundColor = textInfo.color.cgColor;
-        tmpLayer.alignmentMode = kCAAlignmentCenter;
+        tmpLayer.alignmentMode = CATextLayerAlignmentMode.center;
         tmpLayer.isWrapped = true;
         tmpLayer.font = textInfo.font
         tmpLayer.fontSize = textInfo.fontSize
@@ -66,10 +66,10 @@ class ToastView: UIView {
         anim.duration = 0.7
         anim.fromValue = 0.0
         anim.toValue = 1.0
-        anim.fillMode = kCAFillModeForwards
+        anim.fillMode = CAMediaTimingFillMode.forwards
         anim.isRemovedOnCompletion = false
         anim.delegate = self as CAAnimationDelegate
-        anim.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionLinear)
+        anim.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.linear)
         
         return anim
         

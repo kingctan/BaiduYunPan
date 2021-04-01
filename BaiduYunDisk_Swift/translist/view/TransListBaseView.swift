@@ -29,7 +29,7 @@ class TransListBaseView: UIView {
         
         imgTips.frame = size
         imgTips.image = UIImage.init(named: imgName)
-        imgTips.contentMode = UIViewContentMode.scaleAspectFit
+        imgTips.contentMode = UIView.ContentMode.scaleAspectFit
         self.addSubview(imgTips)
     }
     

@@ -526,8 +526,7 @@
 				382225CC1F70C5F8008BA992 /* Sources */,
 				382225CD1F70C5F8008BA992 /* Frameworks */,
 				382225CE1F70C5F8008BA992 /* Resources */,
-				38BA36D7478E7494CF67E618 /* [CP] Embed Pods Frameworks */,
-				46A027DB0C55C747D1B0FC84 /* [CP] Copy Pods Resources */,
+				441416976052F58C80B176AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -586,15 +585,18 @@
 				TargetAttributes = {
 					382225CF1F70C5F8008BA992 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BMXC296NPZ;
 						ProvisioningStyle = Automatic;
 					};
 					382225E31F70C5F8008BA992 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BMXC296NPZ;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 382225CF1F70C5F8008BA992;
 					};
 					382225EE1F70C5F8008BA992 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = BMXC296NPZ;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 382225CF1F70C5F8008BA992;
 					};
@@ -605,6 +607,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -692,13 +695,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		38BA36D7478E7494CF67E618 /* [CP] Embed Pods Frameworks */ = {
+		441416976052F58C80B176AF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BaiduYunDisk_Swift/Pods-BaiduYunDisk_Swift-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BaiduYunDisk_Swift/Pods-BaiduYunDisk_Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -707,22 +710,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaiduYunDisk_Swift/Pods-BaiduYunDisk_Swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		46A027DB0C55C747D1B0FC84 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaiduYunDisk_Swift/Pods-BaiduYunDisk_Swift-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaiduYunDisk_Swift/Pods-BaiduYunDisk_Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EDB8184AC410512C0CD42593 /* [CP] Check Pods Manifest.lock */ = {
@@ -936,11 +924,12 @@
 			baseConfigurationReference = D4767ECA549F7743C9CBC6DD /* Pods-BaiduYunDisk_Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BMXC296NPZ;
 				INFOPLIST_FILE = BaiduYunDisk_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "baize.BaiduYunDisk-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -949,11 +938,12 @@
 			baseConfigurationReference = 3935B5DB72865D294EBCAF25 /* Pods-BaiduYunDisk_Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BMXC296NPZ;
 				INFOPLIST_FILE = BaiduYunDisk_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "baize.BaiduYunDisk-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -962,6 +952,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = BMXC296NPZ;
 				INFOPLIST_FILE = BaiduYunDisk_SwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "baize.BaiduYunDisk-SwiftTests";
@@ -976,6 +967,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = BMXC296NPZ;
 				INFOPLIST_FILE = BaiduYunDisk_SwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "baize.BaiduYunDisk-SwiftTests";
@@ -989,6 +981,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = BMXC296NPZ;
 				INFOPLIST_FILE = BaiduYunDisk_SwiftUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "baize.BaiduYunDisk-SwiftUITests";
@@ -1002,6 +995,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = BMXC296NPZ;
 				INFOPLIST_FILE = BaiduYunDisk_SwiftUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "baize.BaiduYunDisk-SwiftUITests";

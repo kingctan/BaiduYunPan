@@ -62,7 +62,7 @@ class NumberLabelAnim : UILabel{
         
         progress = 0
         timer = CADisplayLink(target: self,selector: #selector(onTimerTick))
-        timer.add(to: RunLoop.current, forMode: RunLoopMode.defaultRunLoopMode)
+        timer.add(to: RunLoop.current, forMode: RunLoop.Mode.default)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -75,7 +75,7 @@ class NumberLabelAnim : UILabel{
     /// 定时器同时更新文本
     ///
     /// - Parameter sender: 定时器对象
-    func onTimerTick(sender:CADisplayLink) {
+    @objc func onTimerTick(sender:CADisplayLink) {
         
         let now:TimeInterval = NSDate.timeIntervalSinceReferenceDate
        

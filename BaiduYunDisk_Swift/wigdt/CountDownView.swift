@@ -69,7 +69,7 @@ class CountDownView: UIView {
         
         textLayer.foregroundColor = color.cgColor;
         //textLayer.backgroundColor = UIColor.orange.cgColor
-        textLayer.alignmentMode = kCAAlignmentCenter;
+        textLayer.alignmentMode = CATextLayerAlignmentMode.center;
         textLayer.isWrapped = true;
         textLayer.font = font
         //textLayer.fontSize = 12
@@ -88,9 +88,9 @@ class CountDownView: UIView {
         countDownAnim.fromValue = 0.0
         countDownAnim.toValue = 1.0
         //countDownAnim.delegate = self as CAAnimationDelegate
-        countDownAnim.fillMode = kCAFillModeForwards
+        countDownAnim.fillMode = CAMediaTimingFillMode.backwards
         countDownAnim.isRemovedOnCompletion = false
-        countDownAnim.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionLinear)
+        countDownAnim.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.linear)
         circleLayer.add(countDownAnim, forKey: "")
         
         var countDown : Int = Int(duration)

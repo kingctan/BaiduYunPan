@@ -14,7 +14,7 @@ class BaseTableView : UITableView,UITableViewDelegate,UITableViewDataSource{
     var dataList:Array<BaseModel>?
     
     
-    override init(frame: CGRect, style: UITableViewStyle) {
+    override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         self.frame = frame
         initAttr()
@@ -49,7 +49,7 @@ class BaseTableView : UITableView,UITableViewDelegate,UITableViewDataSource{
     func buildTableViewCell() -> BaseTabViewCell {
         print("子类赶紧去重载吧，不然单元格是默认视图")
         
-        return BaseTabViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "BaseCell")
+        return BaseTabViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: "BaseCell")
         
     }
     

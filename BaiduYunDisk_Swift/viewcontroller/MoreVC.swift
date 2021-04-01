@@ -31,7 +31,7 @@ class MoreVC: BaseVC {
         let btnSuccessToast : UIButton = UIButton.init(frame: CGRect.init(x: 10, y: 400, width: 80, height: 40))
         btnSuccessToast.backgroundColor = UIColor.gray
         btnSuccessToast.tag = 41
-        btnSuccessToast.setTitle("加载成功", for: UIControlState.normal)
+        btnSuccessToast.setTitle("加载成功", for: UIControl.State.normal)
         btnSuccessToast.addTarget(self, action: #selector(onClick), for: .touchUpInside)
         
         self.view.addSubview(btnSuccessToast)
@@ -40,7 +40,7 @@ class MoreVC: BaseVC {
         let btnFailToast : UIButton = UIButton.init(frame: CGRect.init(x: 100, y: 400, width: 80, height: 40))
         btnFailToast.backgroundColor = UIColor.gray
         btnFailToast.tag = 42
-        btnFailToast.setTitle("加载失败", for: UIControlState.normal)
+        btnFailToast.setTitle("加载失败", for: UIControl.State.normal)
         btnFailToast.addTarget(self, action: #selector(onClick), for: .touchUpInside)
         
         self.view.addSubview(btnFailToast)
@@ -49,7 +49,7 @@ class MoreVC: BaseVC {
         let btnTextToast : UIButton = UIButton.init(frame: CGRect.init(x: 200, y: 400, width: 80, height: 40))
         btnTextToast.backgroundColor = UIColor.gray
         btnTextToast.tag = 43
-        btnTextToast.setTitle("文本模式", for: UIControlState.normal)
+        btnTextToast.setTitle("文本模式", for: UIControl.State.normal)
         btnTextToast.addTarget(self, action: #selector(onClick), for: .touchUpInside)
         
         self.view.addSubview(btnTextToast)
@@ -58,14 +58,14 @@ class MoreVC: BaseVC {
         let btncd : UIButton = UIButton.init(frame: CGRect.init(x: 290, y: 400, width: 80, height: 40))
         btncd.backgroundColor = UIColor.gray
         btncd.tag = 44
-        btncd.setTitle("倒计时动画", for: UIControlState.normal)
+        btncd.setTitle("倒计时动画", for: UIControl.State.normal)
         btncd.addTarget(self, action: #selector(onClick), for: .touchUpInside)
         
         self.view.addSubview(btncd)
         
     }
     
-    func onClick(button: UIButton){
+    @objc func onClick(button: UIButton){
     
         switch button.tag {
         case 41:

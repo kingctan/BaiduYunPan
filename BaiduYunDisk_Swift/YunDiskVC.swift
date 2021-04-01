@@ -20,7 +20,7 @@ class YunDiskVC: BaseVC {
                                                                    height : 100))
         
         bg.image = UIImage.init(named: "about_me_title_background")
-        bg.contentMode = UIViewContentMode.scaleToFill
+        bg.contentMode = UIView.ContentMode.scaleToFill
         
         return bg
         
@@ -91,7 +91,7 @@ class YunDiskVC: BaseVC {
         self.view.addSubview(imgHeadBg())
     
         imgHead = UIImageView.init(image: UIImage.init(named: "head.png"))
-        imgHead?.contentMode = UIViewContentMode.scaleToFill
+        imgHead?.contentMode = UIView.ContentMode.scaleToFill
         self.view.addSubview(imgHead!)
         
         imgHead!.snp.makeConstraints { (make) in
@@ -115,7 +115,7 @@ class YunDiskVC: BaseVC {
         
         imgVIP = UIImageView.init(image: UIImage.init(named:"normal_account_icon"))
         imgVIP?.highlightedImage = UIImage.init(named: "normal_account_icon_pressed")
-        imgVIP?.contentMode = UIViewContentMode.scaleToFill
+        imgVIP?.contentMode = UIView.ContentMode.scaleToFill
         self.view.addSubview(imgVIP!)
         
         imgVIP!.snp.makeConstraints { (make) in
@@ -323,14 +323,14 @@ class YunDiskVC: BaseVC {
         
         let qwv: YunDiskTableView = YunDiskTableView.init(frame:CGRect(x : 0, y : 150,width: self.view.frame.width, height: self.view.frame.height))
         qwv.initAttr()
-        qwv.separatorInset = UIEdgeInsetsMake(0, 10, 0, 10)
+        qwv.separatorInset = UIEdgeInsets.init(top:0, left:10, bottom:0, right:10)
         qwv.tableFooterView = UIView(frame:CGRect.zero)
         
         self.view.addSubview(qwv)
         
     }
     
-    func tabOnclassifyMenuMask() {
+    @objc func tabOnclassifyMenuMask() {
         
         //先收缩菜单面板，再收缩背景面板
         UIView.animate(withDuration: 0.5, animations: {[unowned self] in
@@ -375,7 +375,7 @@ class YunDiskVC: BaseVC {
     }
     
     
-    func tabOnClassify() {
+    @objc func tabOnClassify() {
         
         if bIsExpand {
         
@@ -463,7 +463,7 @@ class YunDiskVC: BaseVC {
         
     }
     
-    func tabOnUpload() {
+    @objc func tabOnUpload() {
         
         let uploadDialog : UploadTypeDialog = UploadTypeDialog.uploadDialogInstance
         
@@ -473,7 +473,7 @@ class YunDiskVC: BaseVC {
         
     }
     
-    func tabOnTransList() {
+    @objc func tabOnTransList() {
         
         self.present(TransListVC(), animated: true, completion: nil)
         

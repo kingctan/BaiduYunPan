@@ -29,7 +29,7 @@ class YunDiskResCell : BaseTabViewCell{
         self.backgroundColor = UIColor.white
         
         imgResIcon.image = UIImage.init(named: "inbox_unknow_folder.png")
-        imgResIcon.contentMode = UIViewContentMode.scaleToFill
+        imgResIcon.contentMode = UIView.ContentMode.scaleToFill
         
         self.addSubview(imgResIcon)
         imgResIcon.snp.makeConstraints({(make)in
@@ -81,7 +81,7 @@ class YunDiskResCell : BaseTabViewCell{
     }
 
 
-    func onClick() {
+    @objc func onClick() {
       
         
         guard let msgInfo = self.data else {
